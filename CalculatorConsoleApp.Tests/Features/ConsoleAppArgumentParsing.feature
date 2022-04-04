@@ -3,7 +3,7 @@
 
 @mytag
 Scenario: Add two number
-	Given an epmty arg v array containting
+	Given an epmty argv array containting
 	| Value |
 	| add   |
     | 70    |

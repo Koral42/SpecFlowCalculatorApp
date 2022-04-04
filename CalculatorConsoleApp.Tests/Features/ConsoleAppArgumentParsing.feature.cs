@@ -111,7 +111,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "50"});
 #line 6
- testRunner.Given("an epmty arg v array containting", ((string)(null)), table1, "Given ");
+ testRunner.Given("an epmty argv array containting", ((string)(null)), table1, "Given ");
 #line hidden
 #line 11
  testRunner.When("console app is passed argv", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -123,7 +123,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("console apps values contains 70", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
- testRunner.And("consel apps values contains 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("console apps values contains 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
  testRunner.And("counsel apps result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

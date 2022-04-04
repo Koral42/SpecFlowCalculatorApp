@@ -8,7 +8,11 @@ namespace CalculatorConsoleApp
 
         public static void Main(string[] args)
         {
-            Operator = args[0];
+            
+            foreach (string row in args)
+            {
+                Operator = args[row];
+            }
             
             Console.WriteLine("Hello World!");
 

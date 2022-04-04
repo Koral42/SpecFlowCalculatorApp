@@ -10,8 +10,8 @@ namespace CalculatorConsoleApp.Tests.Steps
     {
         private string[] _argv;
 
-        [Given(@"an epmty arg v array containting")]
-        public void GivenAnEpmtyArgVArrayContainting(Table table)
+        [Given(@"an epmty argv array containting")]
+       public void GivenAnEpmtyArgVArrayContainting(Table table)
         {
             _argv = new string[table.RowCount];
 
@@ -39,13 +39,7 @@ namespace CalculatorConsoleApp.Tests.Steps
         [Then(@"console apps values contains (.*)")]
         public void ThenConsoleAppsValuesContains(int p0)
         {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Then(@"consel apps values contains (.*)")]
-        public void ThenConselAppsValuesContains(int p0)
-        {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(p0, Program.Operator);
         }
 
         [Then(@"counsel apps result should be (.*)")]
