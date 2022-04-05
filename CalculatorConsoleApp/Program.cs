@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CalculatorConsoleApp
 {
@@ -6,16 +7,32 @@ namespace CalculatorConsoleApp
     {
         public static string Operator { get; set; }
 
+        public static List<int> numbers = new List<int>();
+
         public static void Main(string[] args)
         {
+            var argLength = args.Length;
             
-            foreach (string row in args)
-            {
-                Operator = args[row];
-            }
-            
-            Console.WriteLine("Hello World!");
+            //Todo What happens when no arguements are provided?
+            //What Happens when 1000 arguments are provied?
+            //What Happens when 5 Billion Arguemts are provied?
+            //Bound checking
 
+            Operator = args[0];
+            //What Happens when the Letter T is provided?
+            //What Operators should be allowed?
+
+            
+            for (int i = 1; i < argLength; i++)
+            {
+                numbers.Add(int.Parse(args[i]));
+                //what happens if the String is a floating point number?
+                //What happens is the string is ' '? 
+                //What happens if a string is 100 charaters long
+                
+            }
+
+           Console.WriteLine("Hello World!");
         }
     }
 }

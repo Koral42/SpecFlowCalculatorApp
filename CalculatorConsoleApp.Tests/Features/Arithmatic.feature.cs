@@ -20,22 +20,22 @@ namespace CalculatorConsoleApp.Tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ConsoleAppArgumentParsing")]
-    public partial class ConsoleAppArgumentParsingFeature
+    [NUnit.Framework.DescriptionAttribute("SpecFlowFeature1")]
+    public partial class SpecFlowFeature1Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "ConsoleAppArgumentParsing.feature"
+#line 1 "Arithmatic.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ConsoleAppArgumentParsing", "\tSimple calculator for adding two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "SpecFlowFeature1", "\tSimple calculator for adding two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,14 +74,14 @@ namespace CalculatorConsoleApp.Tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Correctly parses add two numbers")]
+        [NUnit.Framework.DescriptionAttribute("Add two Numbers")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void CorrectlyParsesAddTwoNumbers()
+        public virtual void AddTwoNumbers()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correctly parses add two numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two Numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -102,31 +102,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Value"});
-                table2.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "add"});
-                table2.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "70"});
-                table2.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "50"});
 #line 6
- testRunner.Given("an epmty argv array containting", ((string)(null)), table2, "Given ");
+ testRunner.When("Console App receeives the arguments", ((string)(null)), table1, "When ");
 #line hidden
 #line 11
- testRunner.When("console app is passed argv", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 12
- testRunner.Then("console apps opperator is \"add\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Value"});
-                table3.AddRow(new string[] {
-                            "70"});
-                table3.AddRow(new string[] {
-                            "50"});
-#line 13
- testRunner.And("console apps values matches", ((string)(null)), table3, "And ");
+ testRunner.Then("the result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -36,17 +36,17 @@ namespace CalculatorConsoleApp.Tests.Steps
             Assert.AreEqual(p0, Program.Operator);
         }
 
-        [Then(@"console apps values contains (.*)")]
-        public void ThenConsoleAppsValuesContains(int p0)
+        [Then(@"console apps values matches")]
+        public void ThenConsoleAppsValuesMatches(Table table)
         {
-            Assert.AreEqual(p0, Program.Operator);
-        }
+            Assert.AreEqual(table.RowCount, Program.numbers.Count);
 
-        [Then(@"counsel apps result should be (.*)")]
-        public void ThenCounselAppsResultShouldBe(int p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
+            for (var i = 0; i < table.RowCount; i++)
+            {
+                var expected = int.Parse(table.Rows[i]["Value"]);
 
+                Assert.AreEqual(expected, Program.numbers[i]);
+            }
+        }
     }
 }
