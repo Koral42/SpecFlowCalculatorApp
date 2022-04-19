@@ -111,7 +111,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "50"});
 #line 6
- testRunner.When("Console App receeives the arguments", ((string)(null)), table1, "When ");
+ testRunner.When("Console App receives the arguments", ((string)(null)), table1, "When ");
 #line hidden
 #line 11
  testRunner.Then("the result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

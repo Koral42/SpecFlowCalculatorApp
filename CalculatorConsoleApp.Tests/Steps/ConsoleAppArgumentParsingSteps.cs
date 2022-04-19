@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Linq;
 using TechTalk.SpecFlow;
 
 
@@ -48,5 +49,33 @@ namespace CalculatorConsoleApp.Tests.Steps
                 Assert.AreEqual(expected, Program.numbers[i]);
             }
         }
+
+        [When(@"Console App receives the arguments")]
+        public void WhenConsoleAppReceivesTheArguments(Table table)
+        {
+
+            _argv = new string[table.RowCount];
+
+            var i = 0;
+
+            foreach (var row in table.Rows)
+            {
+                _argv[i] = row["Value"];
+                i++;
+            }
+        }
+
+        [Then(@"the result should be (.*)")]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            
+            int sum = Program.numbers.Take(2).Sum();
+
+            Assert.AreEqual(p0, sum);
+
+            //ScenarioContext.Current.Pending();
+        }
+
+
     }
 }

@@ -3,7 +3,7 @@
 
 @mytag
 Scenario: Add two Numbers
-	When Console App receeives the arguments
+	When Console App receives the arguments
 	| Value |
 	| add   |
 	| 70    |
