@@ -72,8 +72,6 @@ namespace CalculatorConsoleApp.Tests.Steps
             int sum = Program.numbers.Take(2).Sum();
 
             Assert.AreEqual(p0, sum);
-
-            //ScenarioContext.Current.Pending();
         }
 
 
