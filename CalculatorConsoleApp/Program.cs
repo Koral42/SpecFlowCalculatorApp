@@ -13,7 +13,7 @@ namespace CalculatorConsoleApp
         {
             var argLength = args.Length;
             
-            //Todo What happens when no arguements are provided?
+            //TODO: What happens when no arguements are provided?
             //What Happens when 1000 arguments are provied?
             //What Happens when 5 Billion Arguemts are provied?
             //Bound checking
