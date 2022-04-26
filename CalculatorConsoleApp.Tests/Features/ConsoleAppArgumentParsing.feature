@@ -3,7 +3,7 @@
 
 @mytag
 Scenario: Correctly parses add two numbers
-	Given an epmty argv array containting
+	Given the console app array contains
 	| Value |
 	| add   |
     | 70    |
@@ -14,3 +14,8 @@ Scenario: Correctly parses add two numbers
 	| Value |
 	| 70    |
 	| 50    |
+
+Scenario: When Argv is Empty
+	Given an empty argv array
+	When console app is executed
+	Then the console app fails

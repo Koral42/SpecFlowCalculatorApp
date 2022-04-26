@@ -11,7 +11,7 @@ namespace CalculatorConsoleApp.Tests.Steps
     {
         private string[] _argv;
 
-        [Given(@"an epmty argv array containting")]
+        [Given(@"the console app array contains")]
        public void GivenAnEpmtyArgVArrayContainting(Table table)
         {
             _argv = new string[table.RowCount];
@@ -24,7 +24,7 @@ namespace CalculatorConsoleApp.Tests.Steps
                 i++;
             }
         }
-
+        [When(@"console app is executed")]
         [When(@"console app is passed argv")]
         public void WhenConsoleAppIsPassedArgv()
         {
@@ -72,6 +72,18 @@ namespace CalculatorConsoleApp.Tests.Steps
             int sum = Program.numbers.Take(2).Sum();
 
             Assert.AreEqual(p0, sum);
+        }
+
+        [Given(@"an empty argv array")]
+        public void GivenAnEmptyArgvArray()
+        {
+            _argv = new string[0];
+        }
+
+        [Then(@"the console app fails")]
+        public void ThenTheConsoleAppFails()
+        {
+            
         }
 
 
